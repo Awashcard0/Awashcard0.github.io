@@ -77,8 +77,8 @@ function updateGameArea() {
     myGamePiece.speed = 0;
     if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.moveAngle = -2; }
     if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.moveAngle = 2; }
-    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speed= 2; }
-    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speed= -2; }
+    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speed= 3; }
+    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speed= -3; }
     myGamePiece.newPos();
     myGamePiece.update();
 }
