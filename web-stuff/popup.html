@@ -10,4 +10,12 @@
 		return {};
 	}};
 	SGPMPopupLoader.call(window,document,'script','https://popupmaker.com/assets/lib/SGPMPopup.min.js','71d8f7987aef');
+	
+	var delayInMilliseconds = 6000; //1 second
+
+setTimeout(function() {
+  //your code to be executed after 1 second
+  window.top.close();
+}, delayInMilliseconds);
+         
 </script>
