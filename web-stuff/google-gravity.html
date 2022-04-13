@@ -11,6 +11,7 @@ function tick() {
   frame++;
   if (time - startTime > 1000) {
       fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
+      document.title = (frame / ((time - startTime) / 1000)).toFixed(1) + " FPS - Google Gravity"
       startTime = time;
       frame = 0;
 	}
@@ -22,7 +23,7 @@ tick();
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<title>Google Gravity saved by Awashcard0</title> 
+		<title>Google Gravity</title> 
 		<style>
 			body {
 
