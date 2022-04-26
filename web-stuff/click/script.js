@@ -177,7 +177,7 @@ function buyupgrade3() {
         clickval3 = clickval3 + 1;
         upgbuy3 = true;
         cst3.innerHTML = "cost: " + cost3;
-        omgc.innerHTML = "omega clickers: " + upg3;
+        omgc.innerHTML = "hyper clickers: " + upg3;
         updac();
         if (check3 === false) {
             if (upgbuy3 === true) {
@@ -186,7 +186,7 @@ function buyupgrade3() {
             }
         }
     } else {
-        alert(mtl + "\"omega clicker\"!")
+        alert(mtl + "\"hyper clicker\"!")
     }
 }
 
@@ -211,7 +211,7 @@ function buyupgrade4() {
         cost5 += 1000;
         upgbuy4 = true;
         clickval4 += 1;
-        hype.innerText = "hyper clickers: "+ upg5;
+        hype.innerText = "omega clickers: "+ upg5;
         cst5.innerText = "cost: " + cost5;
         updac();
         if (check4 === false) {
@@ -223,7 +223,7 @@ function buyupgrade4() {
         
         
     } else {
-        alert(mtl + "\"hyper clicker\"!");
+        alert(mtl + "\"omega clicker\"!");
     }
 }
 
