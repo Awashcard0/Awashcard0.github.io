@@ -113,7 +113,9 @@ function myfunction() {
     if (e >= 10000) {
         hide4.style.visibility = 'visible';
     }
-       
+    if (e >= 15000) {
+        hide5.style.visibility = 'visible';
+    }   
        
     
 }
