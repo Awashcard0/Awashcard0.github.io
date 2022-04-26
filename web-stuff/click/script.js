@@ -29,9 +29,11 @@ var cst4 = document.getElementById("cost4");
 var up4 = document.getElementById("buttonupgrade");
 var hide3 = document.getElementById("hide3");
 var hype = document.getElementById("hype");
+var snkk = document.getElementById("snkk");
 var cst5 = document.getElementById("cost5");
 /*------------------------------------------------*/
 var hide4 = document.getElementById("hide4");
+var hide5 = document.getElementById("hide5");
 var nukc = document.getElementById("nukee");
 var cst6 = document.getElementById("cost6");
 var upgbuy2 = false;
@@ -70,7 +72,7 @@ function codeinput() {
 hide2.style.visibility = 'hidden';
 hide3.style.visibility = 'hidden';
 hide4.style.visibility = 'hidden';
-
+hide5.style.visibility = 'hidden';
 
 
 function click() {
