@@ -265,8 +265,8 @@ function buysnk() {
         cost7 += 10000;
         upgbuy7 = true;
         clickval7 += 5;
-        snkk.innerText = "nuclear clickers: " + upg6;
-        cst7.innerText = "cost: " + cost6;
+        snkk.innerText = "Sonic clickers: " + upg7;
+        cst7.innerText = "cost: " + cost7;
         updac();
         if (check7 === false) {
             if (upgbuy7 === true) {
