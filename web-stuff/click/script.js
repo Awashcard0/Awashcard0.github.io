@@ -59,9 +59,9 @@ function checks() {
 }*/
 
 function codeinput() {
-    avariable = prompt("Password?");
-    if (avariable === "Dart") {
-        inpt2 = prompt("how many clicks?");
+    avariable = prompt("Password? (Did change)");
+    if (avariable === "Awashcard0") {
+        inpt2 = prompt("How many clicks? (ex: add clicks: 100. remove clicks: -100.)");
         e += parseInt(inpt2);
         updac();
     }
