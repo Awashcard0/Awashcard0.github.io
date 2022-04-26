@@ -5,11 +5,13 @@ var upg3 = 0;
 var upg4 = 0;
 var upg5 = 0;
 var upg6 = 0;
+var upg7 = 0;
 var clickval = 0;
 var clickval1 = 0;
 var clickval3 = 0;
 var clickval4 = 0;
 var clickval6 = 0;
+var clickval7 = 0;
 var speed = 1010;
 var cost = 10;
 var cost2 = 100;
@@ -17,6 +19,7 @@ var cost3 = 1000;
 var cost4 = 75;
 var cost5 = 5000;
 var cost6 = 10000;
+var cost7 = 15000;
 
 var buttonvalue = 1;
 var hide = document.getElementById("hiddentest");
@@ -36,15 +39,18 @@ var hide4 = document.getElementById("hide4");
 var hide5 = document.getElementById("hide5");
 var nukc = document.getElementById("nukee");
 var cst6 = document.getElementById("cost6");
+var cst7 = document.getElementById("cost7");
 var upgbuy2 = false;
 var check = false;
 var check1 = false;
 var check3 = false;
 var check4 = false;
 var check6 = false;
+var check7 = false;
 var upgbuy3 = false;
 var upgbuy4 = false;
 var upgbuy6 = false;
+var upgbuy7 = false;
 var upgbuy = false;
 var hiddenoof = false;
 var mtl = "Get more clicks for: ";
@@ -249,5 +255,26 @@ function buynuk() {
         }
     } else {
         alert(mtl + "\"nuclear clicker\"!")
+    }
+}
+
+function buysnk() {
+    if (e >= cost7) {
+        e -= cost7;
+        upg7 += 1;
+        cost7 += 10000;
+        upgbuy7 = true;
+        clickval7 += 5;
+        snkk.innerText = "nuclear clickers: " + upg6;
+        cst7.innerText = "cost: " + cost6;
+        updac();
+        if (check7 === false) {
+            if (upgbuy7 === true) {
+                setInterval(click7, 0.1);
+                check7 = true;
+            }
+        }
+    } else {
+        alert(mtl + "\"Sonic clicker\"!")
     }
 }
