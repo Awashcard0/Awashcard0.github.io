@@ -31,6 +31,7 @@ var omgc = document.getElementById("omega");
 var cst4 = document.getElementById("cost4");
 var up4 = document.getElementById("buttonupgrade");
 var hide3 = document.getElementById("hide3");
+var sonic = document.getElementById("sonic");
 var hype = document.getElementById("hype");
 var snkk = document.getElementById("snkk");
 var cst5 = document.getElementById("cost5");
@@ -79,7 +80,7 @@ hide2.style.visibility = 'hidden';
 hide3.style.visibility = 'hidden';
 hide4.style.visibility = 'hidden';
 hide5.style.visibility = 'hidden';
-
+sonic.style.visibility = 'hidden';
 
 function click() {
     e = e + clickval1;
@@ -272,6 +273,7 @@ function buysnk() {
         snkk.innerText = "Sonic clickers: " + upg7;
         cst7.innerText = "cost: " + cost7;
         updac();
+        sonic.style.visibility = 'visible';
         if (check7 === false) {
             if (upgbuy7 === true) {
                 setInterval(click7, 0.001);
