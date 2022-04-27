@@ -274,7 +274,7 @@ function buysnk() {
         updac();
         if (check7 === false) {
             if (upgbuy7 === true) {
-                setInterval(click7, 0.01);
+                setInterval(click7, 0.001);
                 check7 = true;
             }
         }
