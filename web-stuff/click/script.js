@@ -143,7 +143,7 @@ function buyupgrade() {
         cost = cost + 5;
         upgbuy = true;
         clickval = clickval + 1;
-        document.getElementById("upgrade").innerHTML = " auto clickers: " + upg;
+        document.getElementById("upgrade").innerHTML = "noob clickers: " + upg;
         document.getElementById("cost").innerHTML = "cost: " + cost;
         updac();
         
@@ -157,7 +157,7 @@ function buyupgrade() {
             
         
     } else {
-        alert(mtl+"\"auto clicker\"!");
+        alert(mtl+"\"noob clicker\"!");
     }
 }
 
