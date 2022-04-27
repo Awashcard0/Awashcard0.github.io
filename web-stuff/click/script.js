@@ -6,12 +6,14 @@ var upg4 = 0;
 var upg5 = 0;
 var upg6 = 0;
 var upg7 = 0;
+var upg8 = 0;
 var clickval = 0;
 var clickval1 = 0;
 var clickval3 = 0;
 var clickval4 = 0;
 var clickval6 = 0;
 var clickval7 = 0;
+var clickval8 = 0;
 var speed = 1010;
 var cost = 10;
 var cost2 = 100;
@@ -20,6 +22,7 @@ var cost4 = 75;
 var cost5 = 5000;
 var cost6 = 10000;
 var cost7 = 15000;
+var cost8 = 150000;
 
 var buttonvalue = 1;
 var hide = document.getElementById("hiddentest");
@@ -32,15 +35,18 @@ var cst4 = document.getElementById("cost4");
 var up4 = document.getElementById("buttonupgrade");
 var hide3 = document.getElementById("hide3");
 var sonic = document.getElementById("sonic");
+var vroom = document.getElementById("vroom");
 var hype = document.getElementById("hype");
 var snkk = document.getElementById("snkk");
 var cst5 = document.getElementById("cost5");
 /*------------------------------------------------*/
 var hide4 = document.getElementById("hide4");
 var hide5 = document.getElementById("hide5");
+var hide6 = document.getElementById("hide6");
 var nukc = document.getElementById("nukee");
 var cst6 = document.getElementById("cost6");
 var cst7 = document.getElementById("cost7");
+var cst8 = document.getElementById("cost8");
 var upgbuy2 = false;
 var check = false;
 var check1 = false;
@@ -48,10 +54,12 @@ var check3 = false;
 var check4 = false;
 var check6 = false;
 var check7 = false;
+var check8 = false;
 var upgbuy3 = false;
 var upgbuy4 = false;
 var upgbuy6 = false;
 var upgbuy7 = false;
+var upgbuy8 = false;
 var upgbuy = false;
 var hiddenoof = false;
 var mtl = "Get more clicks for: ";
@@ -80,11 +88,13 @@ hide2.style.visibility = 'hidden';
 hide3.style.visibility = 'hidden';
 hide4.style.visibility = 'hidden';
 hide5.style.visibility = 'hidden';
+hide6.style.visibility = 'hidden';
 sonic.style.visibility = 'hidden';
 
 function click() {
     e = e + clickval1;
     updac();
+    myfunction();
 }
 function click1() {
     e = e + clickval;
@@ -104,6 +114,10 @@ function click6() {
 }
     function click7() {
     e += clickval7;
+    updac();
+}
+function click7() {
+    e += clickval8;
     updac();
 }
 hide.style.visibility = 'hidden';
@@ -129,7 +143,9 @@ function myfunction() {
     if (e >= 15000) {
         hide5.style.visibility = 'visible';
     }   
-       
+    if (e >= 150000) {
+        hide6.style.visibility = 'visible';
+    }  
     
 }
 
@@ -282,5 +298,28 @@ function buysnk() {
         }
     } else {
         alert(mtl + "\"Sonic clicker\"!")
+    }
+}
+
+
+
+function buyvroom() {
+    if (e >= cost7) {
+        e -= cost7;
+        upg8 += 1;
+        cost8 += 10000;
+        upgbuy8 = true;
+        clickval8 += 5;
+        vroom.innerText = "Vroom Vroom clickers: " + upg7;
+        cst8.innerText = "cost: " + cost8;
+        updac();
+        if (check7 === false) {
+            if (upgbuy8 === true) {
+                setInterval(click8, 0.0001);
+                check7 = true;
+            }
+        }
+    } else {
+        alert(mtl + "\"Vroom Vroom clicker\"!")
     }
 }
