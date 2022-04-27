@@ -305,8 +305,8 @@ function buysnk() {
 
 
 function buyvroom() {
-    if (e >= cost7) {
-        e -= cost7;
+    if (e >= cost8) {
+        e -= cost8;
         upg8 += 1;
         cost8 += 100000;
         upgbuy8 = true;
