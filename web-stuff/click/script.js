@@ -62,7 +62,8 @@ var upgbuy7 = false;
 var upgbuy8 = false;
 var upgbuy = false;
 var hiddenoof = false;
-var mtl = "Get more clicks for: ";
+var mtl = "To get ";
+var mtl2 = " you need more clicks"
 //if (e >= 10) {
     //if (hide.style.visibility === 'visible') {
      //   hide.style.visibility = 'hidden';
@@ -174,7 +175,7 @@ function buyupgrade() {
             
         
     } else {
-        alert(mtl+"\"noob clicker\"!");
+        alert(mtl+"noob clicker"+mtl2);
     }
 }
 
@@ -231,7 +232,7 @@ function upgradeclick() {
         up4.innerHTML = "button upgrades: " + upg4;
         cst4.innerHTML = "cost: " + cost4;
     } else {
-        alert(mtl + "\"button upgrade\"!");
+        alert(mtl + "button upgrade" + mtl2);
     }
 }
 
@@ -254,7 +255,7 @@ function buyupgrade4() {
         
         
     } else {
-        alert(mtl + "\"omega clicker\"!");
+        alert(mtl + "omega clicker" + mlt2);
     }
 }
 
@@ -275,7 +276,7 @@ function buynuk() {
             }
         }
     } else {
-        alert(mtl + "\"nuclear clicker\"!")
+        alert(mtl + "nuclear clicker" + mlt2)
     }
 }
 
@@ -297,7 +298,7 @@ function buysnk() {
             }
         }
     } else {
-        alert(mtl + "\"Sonic clicker\"!")
+        alert(mtl + "Sonic clicker" + mlt2)
     }
 }
 
@@ -320,6 +321,6 @@ function buyvroom() {
             }
         }
     } else {
-        alert(mtl + "\"Vroom Vroom clicker\"!")
+        alert(mtl + "Vroom Vroom clicker" + mlt2)
     }
 }
