@@ -117,7 +117,7 @@ function click6() {
     e += clickval7;
     updac();
 }
-function click7() {
+    function click8() {
     e += clickval8;
     updac();
 }
