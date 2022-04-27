@@ -308,7 +308,7 @@ function buyvroom() {
     if (e >= cost7) {
         e -= cost7;
         upg8 += 1;
-        cost8 += 10000;
+        cost8 += 100000;
         upgbuy8 = true;
         clickval8 += 5;
         vroom.innerText = "Vroom Vroom clickers: " + upg7;
