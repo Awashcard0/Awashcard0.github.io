@@ -314,10 +314,10 @@ function buyvroom() {
         vroom.innerText = "Vroom Vroom clickers: " + upg7;
         cst8.innerText = "cost: " + cost8;
         updac();
-        if (check7 === false) {
+        if (check8 === false) {
             if (upgbuy8 === true) {
                 setInterval(click8, 0.0001);
-                check7 = true;
+                check8 = true;
             }
         }
     } else {
