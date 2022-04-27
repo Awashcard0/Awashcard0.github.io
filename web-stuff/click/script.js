@@ -101,6 +101,10 @@ function click6() {
     e += clickval6;
     updac();
 }
+    function click7() {
+    e += clickval7;
+    updac();
+}
 hide.style.visibility = 'hidden';
 
 
@@ -270,7 +274,7 @@ function buysnk() {
         updac();
         if (check7 === false) {
             if (upgbuy7 === true) {
-                setInterval(click7, 0.1);
+                setInterval(click7, 0.01);
                 check7 = true;
             }
         }
