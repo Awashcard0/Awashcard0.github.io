@@ -1,6 +1,6 @@
 <title>Redirect Notice</title>
 <link href="/my-test/favicon.ico" type="image/x-icon" rel="shortcut icon"><link href="/my-test/favicon.ico" type="image/x-icon" rel="icon">
-<p>Redirecting soon</p>
+<p id="hi">Redirecting soon</p>
 <p>You are leaveing awashcard0.github.io and going to scratch.mit.edu</p>
 <p>If you are not Redirected and the top bar and click pop-up blocked, click it and allow Redirects</p>
 <body onload="function()">
@@ -8,6 +8,7 @@
   var delayInMilliseconds = 2000; 
 
 setTimeout(function() {
+  document.getElementById("hi").innerHTML = "Redirecting now";
 location.href = "https://scratch.mit.edu/projects/650136893/fullscreen";
 }, delayInMilliseconds);
  
