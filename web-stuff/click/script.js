@@ -311,7 +311,7 @@ function buyvroom() {
         cost8 += 100000;
         upgbuy8 = true;
         clickval8 += 5;
-        vroom.innerText = "Vroom Vroom clickers: " + upg7;
+        vroom.innerText = "Vroom Vroom clickers: " + upg8;
         cst8.innerText = "cost: " + cost8;
         updac();
         if (check8 === false) {
