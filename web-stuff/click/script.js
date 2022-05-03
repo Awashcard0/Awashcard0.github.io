@@ -78,11 +78,16 @@ function checks() {
 function save(saveCookie) {
     document.cookie = save + "=" + e;
 }
-function load ()
-	let e = document.cookie;
+function load(saveCookie) {
+ let e = getCookie("saveCookie");
+  if (username = "0") {
+   alert("Nothing to load");
+  } else {
+    alert("Loaded " + e + " Click");
+  }
 }
 function wipesave() {
-document.cookie = 0;
+document.cookie = save + "=" + 0;
 }
 
 function codeinput() {
