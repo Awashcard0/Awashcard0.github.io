@@ -76,7 +76,7 @@ function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
 function save(saveCookie) {
-    document.cookie = save + "=" + e;
+    document.cookie = "save" + "=" + e + ";";
 }
 function load(saveCookie) {
  let e = getCookie("saveCookie");
