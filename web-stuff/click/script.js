@@ -76,12 +76,8 @@ function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
     function save() {
-  let user = getCookie("data");
-  if (user != "0") {
-    alert("Nothing to load");
-  } else {
-     setCookie("data", 30);
-  }
+   let user = getCookie("username");
+   e = user
 }
 function wipesave() {
 document.cookie = save + "=" + 0;
