@@ -75,10 +75,12 @@ var mtl2 = " you need more clicks"
 function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
-function save() {
-      setCookie("data", e, 365);
+function save(data) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = data + "=" + e + ";" + expires + ";path=/";
 }
-
 
     function load() {
    let savedata = getCookie("data");
