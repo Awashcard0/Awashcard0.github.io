@@ -75,7 +75,7 @@ var mtl2 = " you need more clicks"
 function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
-function save(data) {
+function save() {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   let expires = "expires=" + d.toUTCString();
