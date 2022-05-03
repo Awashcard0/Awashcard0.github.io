@@ -79,7 +79,7 @@ function save() {
 	document.cookie = e;
 }
 
-function load ()
+function load () {
 	let e = document.cookie;
 }
 function wipesave() {
