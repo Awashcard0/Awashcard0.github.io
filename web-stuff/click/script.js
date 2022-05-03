@@ -75,6 +75,16 @@ var mtl2 = " you need more clicks"
 function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
+function save() {
+	document.cookie = e;
+}
+
+function load ()
+	let e = document.cookie;
+}
+function wipesave() {
+document.cookie = 0;
+}
 
 function codeinput() {
     avariable = prompt("Password? (Did change)");
