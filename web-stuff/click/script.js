@@ -75,7 +75,9 @@ var mtl2 = " you need more clicks"
 function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
-    function save() {
+
+
+    function load() {
    let user = getCookie("username");
    e = user
 }
