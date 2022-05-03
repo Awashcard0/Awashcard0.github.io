@@ -75,15 +75,12 @@ var mtl2 = " you need more clicks"
 function checks() {
     //checks for e >= than hidden reqiurnments
 }*/
-function save(saveCookie) {
-    document.cookie = "save" + "=" + e + ";";
-}
-function load(saveCookie) {
- let e = getCookie("saveCookie");
-  if (username = "0") {
-   alert("Nothing to load");
+    function save() {
+  let user = getCookie("data");
+  if (user != "0") {
+    alert("Nothing to load");
   } else {
-    alert("Loaded " + e + " Click");
+     setCookie("data", 30);
   }
 }
 function wipesave() {
