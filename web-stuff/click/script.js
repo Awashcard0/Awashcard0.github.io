@@ -83,7 +83,7 @@ const d = new Date();
 }
 
 function save() {
-    setCookie("data");
+    setCookie(e);
     alert("Saved the game")
   }
 
