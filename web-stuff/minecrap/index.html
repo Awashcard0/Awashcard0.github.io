@@ -11,7 +11,6 @@ function onload() {
 		pass = prompt("I did not make this i found it at https://github.com/Browncha023/MinecraftJS. type YES to continue");
     if (pass === "YES") {
         alert("Thank you (If you have a cool world please email it to me. Get the save code by clicking get saved code in the world you want to send me)");
-	    document.documentElement.requestFullscreen();
 		 } else {
     alert("You must type YES");
 	 location.reload();
@@ -1217,6 +1216,7 @@ function MineKhan() {
 		fill(255, 255, 255)
 		textSize(10)
 		changeScene("play")
+		document.documentElement.requestFullscreen();
 	}
 
 	let gl
