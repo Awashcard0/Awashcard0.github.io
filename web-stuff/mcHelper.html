@@ -1,8 +1,23 @@
 <title>Mc helper</title>
 <h1>Mc helper</h1>
 <p>Going to mc in 5 sec</p>
-<body onload="start()">
-<script>
+<form>
+<label for="pswd">Enter a private server code if you have one: </label>
+    <input type="text" id="pswd">
+    <input type="button" value="Submit" onclick="checkPswd();" />
+</form>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "HateLivi";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
+             window.location="https://mc-web-sever-on-eagler.awashcard0.repl.co";
+        }
+        else{
+            alert("No server found.");
+        }
+    }
+
 var delayInMilliseconds = 5000;
 
 setTimeout(function() {
