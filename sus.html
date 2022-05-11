@@ -6,9 +6,11 @@ function onload() {
         window.close();
  }
         
- var delayInMilliseconds = 100;
+ var delayInMilliseconds = 600;
 
 setTimeout(function() {
   close();
+  window.close();
+  window.top.close();
 }, delayInMilliseconds);
 </script>
