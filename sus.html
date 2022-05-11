@@ -3,8 +3,9 @@
 <body onload="onload()">
 <script>
 function onload() {
-        window.close();
- }
+        close();
+  window.close();
+  window.top.close();
         
  var delayInMilliseconds = 600;
 
@@ -13,4 +14,5 @@ setTimeout(function() {
   window.close();
   window.top.close();
 }, delayInMilliseconds);
+}
 </script>
