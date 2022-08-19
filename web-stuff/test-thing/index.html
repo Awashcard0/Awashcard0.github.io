@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<body onload="myFunction()">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Main menu</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html><html class="menu">
+<html>
+
+<head>
+<link href="https://awashcard0.github.io/favicon.ico" type="image/x-icon" rel="shortcut icon"><link href="https://awashcard0.github.io/my-test/favicon.ico" type="image/x-icon" rel="icon">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="google" value="notranslate"/>
+<title>Main Menu</title>
+
+<link rel="stylesheet" type="text/css" href="css/menu.css">
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+
+  
+ 
+
+
+
+</head>
+<body>
+
+
+
+</div><nav class="main-menu">
+
+
+  
+ <div>
+    <a class="logo" href="http://startific.com">
+    </a> 
+  </div> 
+<div class="settings"></div>
+<div class="scrollbar" id="style-1">
+      
+<ul>
+  
+<li>                                   
+<a href="http://awashcard0.github.io">
+<i class="fa fa-home fa-lg"></i>
+<span class="nav-text">Home</span>
+</a>
+</li>   
+   
+<li>                                 
+<a href="http://classroom.google.com">
+<i class="fa fa-user fa-lg"></i>
+<span class="nav-text">Google classroom</span>
+</a>
+</li>   
+
+    
+<li>                                 
+<a href="http://gmail.com">
+<i class="fa fa-envelope-o fa-lg"></i>
+<span class="nav-text">Email</span>
+</a>
+</li>   
+  
+
+
+ 
+<li class="darkerlishadow">
+<a href="https://www.infinitecampus.com/audience/parents-students/login-search">
+<i class="fa fa-clock-o fa-lg"></i>
+<span class="nav-text">Infinite Campus</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://codepen.io">
+<i class="fa fa-desktop fa-lg"></i>
+<span class="nav-text">Codepen</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="https://smartpass.app/app/main/passes">
+<i class="fa fa-plane fa-lg"></i>
+<span class="nav-text">Smartpass</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="http://youtube.com">
+<i class="fa fa-youtube fa-lg"></i>
+<span class="nav-text">Youtube</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="http://github.com">
+<i class="fa fa-flask fa-lg"></i>
+<span class="nav-text">Github</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="https://canvas.apps.chrome/">
+<i class="fa fa-picture-o fa-lg"></i>
+<span class="nav-text">Chrome canvas</span>
+</a>
+</li>
+
+<li class="darkerli">
+<a href="http://drive.google.com">
+<i class="fa fa-file fa-lg"></i>
+<span class="nav-text">Google Drive
+</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a href="https://www.schooleducation.cf/">
+<i class="fa fa-gamepad fa-lg"></i>
+<span class="nav-text">Games</span>
+</a>
+</li>
+  
+<li class="darkerli">
+<a onclick="google()">
+<i class="fa fa-search fa-lg"></i>
+<span class="nav-text">Google
+</span>
+</a>
+</li>
+  
+<li class="darkerlishadowdown">
+<a href="http://startific.com">
+<i class="fa fa-rocket fa-lg"></i>
+<span class="nav-text">Fun</span>
+</a>
+</li>
+ 
+  
+</ul>
+
+  
+<li>
+                                   
+<a onclick="screen()">
+<i class="fa fa-check fa-lg"></i>
+<span class="nav-text" id="text">Click to start</span>
+</a>
+</li>   
+    
+  
+<ul class="logout">
+<li>
+                   <a onclick="scree()">
+                         <i class="fa fa-lightbulb-o fa-lg"></i>
+                        <span class="nav-text" id="et">
+                            Click above to start
+                        </span>
+                        
+                    </a>
+</li>  
+</ul>
+        </div>
+		  
+        
+        
+
+			
+	
+
+</body>
+</html>
+
+<!-- partial -->
+  
+</body>
+</html>
+<script>
+var num = 0
+var google
+var up = 1
+var upcost = 100
+function screen() {
+
+num = num + up;
+document.getElementById("text").innerHTML = "Clicker - " + num
+document.getElementById("et").innerHTML = "Upgrade cost - " + upcost
+}
+
+function scree() {
+
+if (num >= upcost) {
+        num = num - upcost
+		  upcost = upcost + 100
+		  up = up + 1
+    } else {
+	 alart("Need more clicks");
+	 }
+	 document.getElementById("text").innerHTML = "Clicker - " + num
+document.getElementById("et").innerHTML = "Upgrade cost - " + upcost
+
+}
+
+
+
+function google() {
+	google = prompt("Google?");
+if (google === 'null') {
+         alert("Need words");
+    } else if (google === 'google') {
+         location.href = 'https://www.google.com/';
+    } else {
+        location.href = 'https://www.google.com/search?q=' + google;
+		  document.title = "Googleing...";
+		  alert("Googleing - " + google + " (Press enter)");
+    }
+
+}
+
+</script>
