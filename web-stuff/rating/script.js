@@ -94,7 +94,7 @@ function send() {
 
 function stats() {
 	
-	  alert("Zero: " + zero + " One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five)
+	  alert("One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five)
 
 	//var elem = document.body;
 
