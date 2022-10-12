@@ -82,12 +82,16 @@ function send() {
 		zero = zero + 1
 	} else if (value == 1) {
 		one = one + 1
+		ask()
 	} else if (value == 2) {
 		two = two + 1
+		ask()
 	} else if (value == 3) {
 		three = three + 1
+		ask()
 	} else if (value == 4) {
 		or = or + 1
+		ask()
 	} else if (value == 5) {
 		five = five + 1
 		alert("Thank you")
@@ -112,11 +116,14 @@ function stats() {
 
 function ask() {
 	res = prompt("Do you have any other feedback?")
-	if (res == null) {
+	if (res == "null") {
 		alert("Thank you")
 	} else if (res == "") {
 		alert("Thank you")
 	} else {
 		ares = res
+		alert("Thank you for your feedback")
+
 	}
 }
+
