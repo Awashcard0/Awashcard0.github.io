@@ -1,7 +1,16 @@
-<button onclick="ok()">Open</button>
+<!DOCTYPE html>
+<body>
+<button id="hi" onclick="ok()">Open</button>
+<style>
+    body {
+         background-color: rgb(33,33,33);
+         }
+</style>
 <script>
     function ok() {
 
     window.open("./index.html", "Rating window", menubar=0,status=0,titlebar=0)
+    document.getElementById("hi").innerHTML = "Thank you"
     }
 </script>
+</body>
