@@ -101,7 +101,7 @@ function send() {
 
 function stats() {
 	
-	  alert("One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five + "/nMost recent feedback: " + ares)
+	  alert("One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five + " Most recent feedback: " + ares)
 
 	//var elem = document.body;
 
@@ -120,10 +120,17 @@ function ask() {
 		alert("Thank you")
 	} else if (res == "") {
 		alert("Thank you")
+	} else if (res == "no") {
+		alert("Thank you")
+	} else if (res == "No") {
+		alert("Thank you")
+	} else if (res == "NO") {
+		alert("Thank you")
+	} else if (res == "nO") {
+		alert("Thank you")
 	} else {
 		ares = res
 		alert("Thank you for your feedback")
-
 	}
 }
 
