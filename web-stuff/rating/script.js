@@ -5,6 +5,8 @@ var two = 0
 var three = 0
 var or = 0
 var five = 0
+var res
+var ares = "Not set"
 
 
 
@@ -88,13 +90,14 @@ function send() {
 		or = or + 1
 	} else if (value == 5) {
 		five = five + 1
+		alert("Thank you")
 	}
-	alert("Thank you")
+	
 }
 
 function stats() {
 	
-	  alert("One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five)
+	  alert("One: " + one + " Two: " + two + " Three: " + three + " Four: " + or + " Five: " + five + "/nMost recent feedback: " + ares)
 
 	//var elem = document.body;
 
@@ -105,4 +108,15 @@ function stats() {
   } else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen();
   }
+}
+
+function ask() {
+	res = prompt("Do you have any other feedback?")
+	if (res == null) {
+		alert("Thank you")
+	} else if (res == "") {
+		alert("Thank you")
+	} else {
+		ares = res
+	}
 }
