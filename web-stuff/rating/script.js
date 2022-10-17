@@ -7,6 +7,7 @@ var or = 0
 var five = 0
 var res
 var ares = "Not set"
+var data
 
 
 
@@ -115,6 +116,7 @@ function stats() {
 }
 
 function ask() {
+	if (data == "y") {
 	res = prompt("Do you have any other feedback?")
 	if (res == "null") {
 		alert("Thank you")
@@ -132,5 +134,11 @@ function ask() {
 		ares = res
 		alert("Thank you for your feedback")
 	}
+} else {
+	alert("Thank you")
+}
 }
 
+function load() {
+	data = prompt("Ask for feedback (y/n)")
+}
