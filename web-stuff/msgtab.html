@@ -23,7 +23,7 @@ body {
 var nice = 0;
 
 function start() {
-	nice = prompt("What to change tab title too?");
+	nice = prompt("What to change tab title too?", nice);
 	 if (nice === 'null') {
          document.title = "msg tab	";
 			document.getElementById("hi").innerHTML = "";
