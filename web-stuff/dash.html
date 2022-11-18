@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/script.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <title>Document</title>
+    <button onclick="myFunction();">Dark</button>
+</head>
+<body onload="gettime();">
+    <div id="app"></div>
+</body>
+<script>
+    var date = "Date"
+    var time = "Time"
+    var today = new Date();
+	
+    
+    function gettime() {
+      today = new Date();
+ date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+ time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//gettime();
+
+    var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true
+});
+
+typewriter.typeString('Hello')
+  .pauseFor(250)
+  .deleteAll()
+  .typeString('The time is ' + time)
+  .pauseFor(1500)
+  .deleteAll()
+  .typeString("The date is " + date)
+  //.typeString('<strong></strong>')
+  .pauseFor(1500)
+  .start();	
+  setTimeout(() => {  gettime(); }, 17500);
+}
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<style>
+  div {
+    padding: 70px 0;
+  /* border: 3px solid green; */
+  text-align: center;
+    font-size: 75px;
+  }
+  
+  .dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+</html>
