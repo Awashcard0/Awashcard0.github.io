@@ -13,12 +13,14 @@
     <div id="app"></div>
 </body>
 <script>
+    var ran = 0
     var date = "Date"
     var time = "Time"
     var today = new Date();
 	
     
     function gettime() {
+      ran = ran + 1 
       today = new Date();
  date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -30,7 +32,7 @@ var typewriter = new Typewriter(app, {
   loop: true
 });
 
-typewriter.typeString('Hello')
+typewriter.typeString("Hello")
   .pauseFor(250)
   .deleteAll()
   .typeString('The time is ' + time)
@@ -53,7 +55,7 @@ function myFunction() {
     padding: 70px 0;
   /* border: 3px solid green; */
   text-align: center;
-    font-size: 75px;
+    font-size: 175px;
   }
   
   .dark-mode {
