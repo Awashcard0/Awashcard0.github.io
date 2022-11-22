@@ -9,8 +9,7 @@
     <title>Typewriter dashboard</title>
     <button onclick="myFunction();">Dark</button>
 </head>
-<body onload="myFunction();"
-<body onload="gettime();">
+<body onload="myFunction();"></body>
     <div id="app"></div>
 </body>
 <script>
@@ -19,7 +18,8 @@
     var time = "Time"
     var today = new Date();
 	
-    
+    gettime();
+
     function gettime() {
       ran = ran + 1 
       today = new Date();
