@@ -24,7 +24,7 @@
       ran = ran + 1 
       today = new Date();
  //date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
- date = today.getDate()+"-"+(today.getMonth()+1)+"-"+today.getFullYear();
+ date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 //gettime();
 
@@ -37,10 +37,10 @@ var typewriter = new Typewriter(app, {
 typewriter.typeString("Hello")
   .pauseFor(250)
   .deleteAll()
-  .typeString('The time is ' + time)
+  .typeString('The time is ' + "<strong>" + time + "</strong>")
   .pauseFor(1500)
   .deleteAll()
-  .typeString("The date is " + date)
+  .typeString("The date is " + "<strong>" + date + "</strong>")
   //.typeString('<strong></strong>')
   .pauseFor(1500)
   .start();	
