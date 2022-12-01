@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick edit</title>
+</head>
+<body>
+<div>
+  <h1>Quick edit</h1>
+    <div>
+        <!-- top nav -->
+        <button onclick="copy()">Copy</button>
+        <button onclick="share()">Need button idea</button>
+    </div>
+    <div>
+        <!-- Text box -->
+        <textarea type="text" id="text" name="text" rows="34" cols="100%" autofocus></textarea>
+    </div>
+</div>
+    <div id="snackbar">Copyed to clipboard</div>
+</body>
+<script>
+    var text = 'copy'
+
+    function share() {
+      // text = document.getElementById("text");
+      // location.href = "mailto:?body=" + text
+
+    }
+
+    function copy() {
+      var x = document.getElementById("snackbar");
+      text = document.getElementById("text");
+      text.select();
+      text.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(text.value);
+      x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+</script>
+<style>
+  textarea {
+    width: 100%;
+    height: 100%;
+  }
+
+    #snackbar {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  border-radius: 25px;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+</html>
