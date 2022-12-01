@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <title>Quick edit</title>
 </head>
 <body style="background-color:#a8a8a8;">
 <div>
-  <h1>Quick edit</h1>
+  <h1 style="font-family: 'Ubuntu', sans-serif;" >Quick edit</h1>
     <div>
         <!-- top nav -->
         <button onclick="copy()">Copy</button>
-        <button onclick="share()">Need button idea</button>
-        <input type="file" id="file-input" />
         <button onclick="savedoc()">Save</button>
         <button onclick="cle()">Clear</button>
+        <input type="file" id="file-input" />
     </div>
     <div>
         <!-- Text box -->
-        <textarea type="text" id="text" name="text" rows="34" cols="100%" autofocus></textarea>
+        <textarea type="text" id="text" name="text" rows="36" cols="100%" autofocus></textarea>
     </div>
 </div>
     <div id="snackbar">Copyed to clipboard</div>
@@ -38,15 +38,19 @@
     }
 
     function savedoc() {
-      
- const fs = require('fs')
-let fInput = "You are reading the content from Tutorials Point"
-fs.writeFile('./tp.txt', fInput, (err) => {
-   if (err) throw err;
-   else{
-      alert("The file is updated with the given data")
-   }
-})
+        var filename = prompt("File name?\nex. filename.fileextension")
+        text = document.getElementById("text");
+        // var auss = ask("You are saving the file as " + filename)
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
     }
 
     function readSingleFile(e) {
@@ -70,11 +74,6 @@ function displayContents(contents) {
 document.getElementById('file-input')
   .addEventListener('change', readSingleFile, false);
 
-    function share() {
-      // text = document.getElementById("text");
-      // location.href = "mailto:?body=" + text
-
-    }
 
     function copy() {
       var x = document.getElementById("snackbar");
@@ -90,6 +89,8 @@ document.getElementById('file-input')
   textarea {
     width: 100%;
     height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    background-color:#a8a8a8;
   }
 
     #snackbar {
