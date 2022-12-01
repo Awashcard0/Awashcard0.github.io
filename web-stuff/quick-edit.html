@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick edit</title>
 </head>
-<body>
+<body style="background-color:#a8a8a8;">
 <div>
   <h1>Quick edit</h1>
     <div>
         <!-- top nav -->
         <button onclick="copy()">Copy</button>
         <button onclick="share()">Need button idea</button>
+        <input type="file" id="file-input" />
+        <button onclick="savedoc()">Save</button>
+        <button onclick="cle()">Clear</button>
     </div>
     <div>
         <!-- Text box -->
@@ -20,9 +23,52 @@
     </div>
 </div>
     <div id="snackbar">Copyed to clipboard</div>
+    <div id="del">Cleared</div>
 </body>
 <script>
     var text = 'copy'
+
+    function cle() {
+      var y = document.getElementById("del");
+      text = document.getElementById("text");
+      text.value = "";
+      text.select();
+      y.className = "show";
+      setTimeout(function(){ y.className = y.className.replace("show", ""); }, 3000);
+    }
+
+    function savedoc() {
+      
+ const fs = require('fs')
+let fInput = "You are reading the content from Tutorials Point"
+fs.writeFile('./tp.txt', fInput, (err) => {
+   if (err) throw err;
+   else{
+      alert("The file is updated with the given data")
+   }
+})
+    }
+
+    function readSingleFile(e) {
+  var file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var contents = e.target.result;
+    displayContents(contents);
+  };
+  reader.readAsText(file);
+}
+
+function displayContents(contents) {
+  text = document.getElementById("text");
+  text.value = contents;
+}
+
+document.getElementById('file-input')
+  .addEventListener('change', readSingleFile, false);
 
     function share() {
       // text = document.getElementById("text");
@@ -62,7 +108,30 @@
   font-size: 17px;
 }
 
+#del {
+  visibility: hidden;
+  min-width: 100px;
+  margin-left: -100px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
 #snackbar.show {
+  border-radius: 25px;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#del.show {
   border-radius: 25px;
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
