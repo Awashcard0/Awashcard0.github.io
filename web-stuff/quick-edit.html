@@ -16,14 +16,16 @@
         <button onclick="savedoc()">Save</button>
         <button onclick="cle()">Clear</button>
         <input type="file" id="file-input" />
+        <input type="text" id="savebox" disabled placeholder="JS is stupid so this needed to save">
     </div>
     <div>
         <!-- Text box -->
-        <textarea type="text" id="text" name="text" rows="36" cols="100%" autofocus></textarea>
+        <textarea type="text" id="text" name="text" rows="36" cols="100%" placeholder="Edit text here" autofocus></textarea>
     </div>
 </div>
     <div id="snackbar">Copyed to clipboard</div>
     <div id="del">Cleared</div>
+    <div id="sav">Downloaded</div>
 </body>
 <script>
     var text = 'copy'
@@ -40,9 +42,11 @@
     function savedoc() {
         var filename = prompt("File name?\nex. filename.fileextension")
         text = document.getElementById("text");
-        // var auss = ask("You are saving the file as " + filename)
+        var savebox = document.getElementById("savebox");
+        savebox.value = text.value
+        if (confirm("You are saving the file as " + filename) == true) {
   var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(savebox.value));
   element.setAttribute('download', filename);
 
   element.style.display = 'none';
@@ -51,6 +55,12 @@
   element.click();
 
   document.body.removeChild(element);
+  var x = document.getElementById("sav");
+  x.className = "show";
+      setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    } else {
+        alert("Canceled")
+    }
     }
 
     function readSingleFile(e) {
@@ -125,6 +135,22 @@ document.getElementById('file-input')
   font-size: 17px;
 }
 
+#sav {
+  visibility: hidden;
+  min-width: 100px;
+  margin-left: -100px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
 #snackbar.show {
   border-radius: 25px;
   visibility: visible;
@@ -133,6 +159,13 @@ document.getElementById('file-input')
 }
 
 #del.show {
+  border-radius: 25px;
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#sav.show {
   border-radius: 25px;
   visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
