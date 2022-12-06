@@ -14,6 +14,7 @@
         <!-- top nav -->
         <button onclick="copy()">Copy</button>
         <button onclick="savedoc()">Save</button>
+        <button onclick="tsave()">Test save</button>
         <button onclick="cle()">Clear</button>
         <input type="file" id="file-input" />
         <input type="text" id="savebox" disabled placeholder="JS is stupid so this needed to save">
@@ -29,6 +30,13 @@
 </body>
 <script>
     var text = 'copy'
+
+    function tsave() {
+      text = document.getElementById("text");
+        var savebox = document.getElementById("savebox");
+        savebox.value = text.value
+        text.value = savebox.value
+    }
 
     function cle() {
       var y = document.getElementById("del");
