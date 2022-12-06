@@ -9,6 +9,7 @@
     <title>Typewriter dashboard</title>
     <button onclick="myFunction();">Dark</button>
 </head>
+<body onload="startTime()"></body>
 <body onload="myFunction();"></body>
     <div id="app"></div>
 </body>
@@ -21,11 +22,11 @@
     gettime();
 
     function gettime() {
-      ran = ran + 1 
+      // ran = ran + 1 
       today = new Date();
  //date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
  date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
- time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 //gettime();
 
     var app = document.getElementById('app');
@@ -45,6 +46,37 @@ typewriter.typeString("Hello")
   .pauseFor(1500)
   .start();	
   setTimeout(() => {  gettime(); }, 17500);
+}
+
+function startTime() {
+    var to=new Date();
+    var h=to.getHours();
+    var m=to.getMinutes();
+    var s=to.getSeconds();
+    var ampm = "";
+    m = checkTime(m);
+    s = checkTime(s);
+    if (h > 12) {
+        h = h - 12;
+        ampm = " PM";
+    } else if (h == 12){
+        h = 12;
+        ampm = " PM";
+    } else if (h < 12){
+        ampm = " AM";
+    } else {
+        ampm = " PM";
+    };
+    if(h==0) {
+    h=12;
+    }
+time = h+":"+m+":"+s+ampm;
+var t = setTimeout(function(){startTime()},500);
+}
+startTime();
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
 }
 
 function myFunction() {
