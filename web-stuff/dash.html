@@ -4,31 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/script.js"></script>
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
     <title>Typewriter dashboard</title>
-    <button onclick="myFunction();">Dark</button>
 </head>
 <body>
     <div id="app"></div>
 </body>
 <script>
-    var ran = 0
-    var date = "Date"
-    var time = "Time"
-    var today = new Date();
-	
-    myFunction();
-    startTime();
-    gettime();
+    startTime()
+    gettime()
 
     function gettime() {
-      // ran = ran + 1 
       today = new Date();
- //date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
  date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
-//  time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-//gettime();
+
 
     var app = document.getElementById('app');
 
@@ -36,17 +25,15 @@ var typewriter = new Typewriter(app, {
   loop: true
 });
 
-typewriter.typeString("Hello")
-  .pauseFor(250)
-  .deleteAll()
-  .typeString('The time is ' + time)
+
+typewriter.typeString('The time is ' + time)
   .pauseFor(1500)
   .deleteAll()
   .typeString("The date is " + date)
   //.typeString('<strong></strong>')
   .pauseFor(1500)
   .start();	
-  setTimeout(() => {  gettime(); }, 17500);
+  setTimeout(() => {  gettime(); }, 16000);
 }
 
 function startTime() {
@@ -80,22 +67,41 @@ function checkTime(i) {
     return i;
 }
 
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
+// Backround
+var setBgColor = function () {
+    var bodyBg = document.body.style.backgroundColor;
+    var r = Math.floor( Math.random() * 256 );
+    var g = Math.floor( Math.random() * 256 );
+    var b = Math.floor( Math.random() * 256 );
+    var all = r + g + b
+    if (all > 382.5) {
+        //light
+        document.getElementById("app").style.color = "rgb(0,0,0)";
+    } else {
+        //dark
+        document.getElementById("app").style.color = "rgb(255,255,255)";
+    }
+    return document.body.style.backgroundColor =  "rgb(" + r + "," + g + "," + b + ")";
 }
+
+window.setInterval(function(){
+    setBgColor();
+}, 5000);
 </script>
 <style>
-  div {
-    padding: 70px 0;
-  /* border: 3px solid green; */
-  text-align: center;
-    font-size: 175px;
-  }
-  
-  .dark-mode {
-  background-color: black;
-  color: white;
-}
-</style>
+
+    div {
+        transition: color 1s ease-in;
+        position: absolute;
+  height: 50px;
+      padding: 70px 0;
+    /* border: 3px solid green; */
+    text-align: left;
+      font-size: 175px;
+    }
+
+    body {
+        transition: background-color 1s ease-in;
+    }
+  </style>
 </html>
