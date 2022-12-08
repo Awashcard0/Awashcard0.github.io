@@ -21,7 +21,7 @@
     </div>
     <div>
         <!-- Text box -->
-        <textarea type="text" id="text" name="text" rows="36" cols="100%" placeholder="Edit text here" autofocus></textarea>
+        <textarea type="text" id="text" name="text" rows="36" cols="100%" placeholder="Edit text here" onchange="savetols()" autofocus></textarea>
     </div>
 </div>
     <div id="snackbar">Copyed to clipboard</div>
@@ -29,7 +29,25 @@
     <div id="sav">Downloaded</div>
 </body>
 <script>
-    var text = 'copy'
+    var text = document.getElementById("text");
+
+    if (localStorage.text) {
+      if (confirm("Do you want to load old changes") == true) {
+        text.value = localStorage.text
+      }
+    } else {
+      localStorage.setItem("text", "");
+    }
+
+    function savetols() {
+      localStorage.text = text.value;
+    }
+
+    if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  alert("Cant save to local storge")
+}
 
     function tsave() {
       text = document.getElementById("text");
