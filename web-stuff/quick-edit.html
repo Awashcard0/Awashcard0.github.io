@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <title>Quick edit (Beta)</title>
+    <title>Quick edit</title>
 </head>
 <body style="background-color:#a8a8a8;">
 <div>
@@ -31,15 +31,14 @@
 <script>
     var text = document.getElementById("text");
 
-    localStorage.setItem("text", localStorage.text);
+    // localStorage.setItem("text", localStorage.text);
 
     if (localStorage.text) {
       if (confirm("Do you want to load old changes") == true) {
         text.value = localStorage.text
       }
     } else {
-      // localStorage.setItem("text", "");
-      localStorage.text = "";
+      localStorage.text = ""
     }
 
     function savetols() {
