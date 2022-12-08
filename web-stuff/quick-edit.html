@@ -40,7 +40,7 @@
     }
 
     function savetols() {
-      localStorage.text = text.value;
+      localStorage.setItem("text", text.value);
     }
 
     if (typeof(Storage) !== "undefined") {
