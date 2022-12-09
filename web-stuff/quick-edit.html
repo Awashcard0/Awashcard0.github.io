@@ -36,6 +36,9 @@
     if (localStorage.getItem("text")) {
       if (confirm("Do you want to load old changes") == true) {
         text.value = localStorage.getItem("text");
+        let savcode = localStorage.getItem("text");
+        localStorage.removeItem("text");
+        localStorage.setItem("text", savcode)
       }
     } else {
       localStorage.setItem("text", "");
