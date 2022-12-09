@@ -35,14 +35,15 @@
 
     if (localStorage.text) {
       if (confirm("Do you want to load old changes") == true) {
-        text.value = localStorage.text
+        text.value = localStorage.getItem("text")
       }
     } else {
-      localStorage.text = ""
+      localStorage.setItem("text", "")
     }
 
     function savetols() {
-      localStorage.text = text.value;
+      // localStorage.text = text.value;
+      localStorage.setItem("text", text.value)
     }
 
     if (typeof(Storage) !== "undefined") {
