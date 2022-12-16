@@ -95,7 +95,8 @@ function send() {
 		ask()
 	} else if (value == 5) {
 		five = five + 1
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	}
 	
 }
@@ -119,23 +120,31 @@ function ask() {
 	if (data == "y") {
 	res = prompt("Do you have any other feedback?")
 	if (res == "null") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else if (res == "") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else if (res == "no") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else if (res == "No") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else if (res == "NO") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else if (res == "nO") {
-		alert("Thank you")
+		document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	} else {
 		ares = res
-		alert("Thank you for your feedback")
+		document.getElementById("top").innerHTML = "Thank you for your feedback"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 	}
 } else {
-	alert("Thank you")
+	document.getElementById("top").innerHTML = "Thank you!"
+		setTimeout(function(){ document.getElementById("top").innerHTML = "How was your experience?" }, 3000);
 }
 }
 
