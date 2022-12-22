@@ -1,4 +1,6 @@
 echo off
+title Hello
+cls
 echo 3
 timeout 1 > nul
 echo 2
